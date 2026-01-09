@@ -17,3 +17,52 @@ ao alternar entre projetos.
 
 ## 📦 Estrutura do projeto
 
+```
+.
+├─ package.json
+├─ themes/
+│  └─ meu-tema.json
+└─ README.md
+```
+
+
+## 🚀 Instalação (local)
+
+Este tema é distribuído como um arquivo `.vsix`.
+
+1. Baixe o arquivo `.vsix` da seção **Releases** do GitHub
+2. No VS Code:
+   - `Ctrl + Shift + P`
+   - **Extensions: Install from VSIX**
+3. Selecione o arquivo baixado
+4. Ative o tema em:
+   - **Preferences: Color Theme**
+
+## 🛠️ Desenvolvimento
+
+Para testar o tema localmente durante o desenvolvimento:
+
+1. Abra o projeto no VS Code
+2. Pressione `F5`
+3. Uma nova janela (**Extension Development Host**) será aberta
+4. Selecione o tema normalmente nessa janela
+
+## 🔍 Inspeção de tokens
+
+Para ajustar cores por linguagem:
+
+1. Abra um arquivo de código
+2. `Ctrl + Shift + P`
+3. **Developer: Inspect Editor Tokens and Scopes**
+4. Use os scopes exibidos no arquivo do tema
+
+## 📌 Versionamento
+
+- A versão do tema é definida em `package.json`
+- Cada versão gera um novo arquivo `.vsix`
+- Os artefatos são disponibilizados via **GitHub Releases**
+
+## 📜 Licença
+
+Uso pessoal.  
+Sem intenção de publicação no VS Code Marketplace.
