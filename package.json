@@ -2,14 +2,16 @@
   "name": "meu-tema-pessoal",
   "displayName": "Meu Tema Pessoal",
   "description": "Tema pessoal para VS Code com cores ajustadas por linguagem (Monokai + Eclipse)",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "FernandoLPX",
   "engines": {
     "vscode": "^1.90.0"
   },
-  "categories": [
-    "Themes"
-  ],
+  "categories": ["Themes"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FernandoLPX/NWTheme"
+  },
   "contributes": {
     "themes": [
       {

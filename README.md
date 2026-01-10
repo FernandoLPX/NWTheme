@@ -66,3 +66,51 @@ Para ajustar cores por linguagem:
 
 Uso pessoal.  
 Sem intenção de publicação no VS Code Marketplace.
+
+
+
+
+
+
+
+
+
+
+# Meu Tema Pessoal (VS Code)
+
+Tema pessoal para VS Code, combinando:
+- Julia Monokai Vibrant (SQL, JS, HTML, CSS)
+- Eclipse Dark (Java, com semantic highlighting)
+
+## Desenvolvimento
+
+- O tema é desenvolvido localmente
+- Testes visuais básicos são feitos via Extension Development Host (F5)
+- Testes de Java com semantic tokens são feitos somente no VS Code real, usando Dev Containers
+
+## Versionamento
+
+Este projeto utiliza versionamento semântico:
+
+- PATCH (0.1.1): ajustes finos de cores
+- MINOR (0.2.0): novas linguagens ou grandes ajustes visuais
+- MAJOR (1.0.0): versão considerada estável
+
+## Build e empacotamento (.vsix)
+
+O empacotamento é feito automaticamente via GitHub Actions.
+
+### Passo a passo para gerar um release:
+
+1. Atualizar a versão no `package.json`
+2. Commitar a mudança
+3. Criar uma tag no formato `vX.Y.Z`
+4. Enviar a tag para o repositório
+
+Exemplo:
+
+```bash
+git add package.json
+git commit -m "Release 0.1.0"
+git tag v0.1.0
+git push origin v0.1.0
