@@ -726,7 +726,109 @@
             "settings": {
                 "foreground": "#F8F8F0"
             }
-        }
+        },
+		{
+			"scope": [
+				"keyword.other.documentation.javadoc.java"
+			],
+			"settings": {
+				"foreground": "#9A8C7C",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": [
+				"meta.embedded.block",
+				"support.constant.java-properties",
+				"punctuation.separator.key-value.java-properties"
+			],
+			"settings": {
+				"foreground": "#D9E8F7"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.type.class.java",
+				"entity.name.type.enum.java",
+				"entity.other.inherited-class.java",
+				"storage.type.java",
+				"variable.other.object.java",
+				"storage.type.generic.java",
+				"storage.type.object.array.java"
+			],
+			"settings": {
+				"foreground": "#1290C3"
+			}
+		},
+		{
+			"scope": [
+				"constant.other.enum.java"
+			],
+			"settings": {
+				"foreground": "#66E1F8",
+				"fontStyle": "italic bold"
+			}
+		},
+		{
+			"scope": [
+				"punctuation.definition.annotation.java",
+				"storage.type.annotation.java"
+			],
+			"settings": {
+				"foreground": "#A0A0A0",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"scope": [
+				"variable.other.definition.java"
+			],
+			"settings": {
+				"foreground": "#F2F200"
+			}
+		},
+		{
+			"scope": [
+				"variable.parameter.java"
+			],
+			"settings": {
+				"foreground": "#79ABFF"
+			}
+		},
+		{
+			"scope": [
+				"entity.name.function.java"
+			],
+			"settings": {
+				"foreground": "#A7EC21"
+			}
+		},
+		{
+			"scope": [
+				"storage.modifier.java",
+				"storage.modifier.extends.java",
+				"storage.modifier.super.java",
+				"storage.modifier.implements.java",
+				"storage.type.primitive.java",
+				"storage.type.primitive.array.java",
+				"constant.language.java",
+				"keyword.other.import.java",
+				"keyword.other.package.java",
+				"keyword.control.java",
+				"keyword.control.new.java",
+				"keyword.control.try.java",
+				"keyword.control.catch.java",
+				"keyword.control.finally.java",
+				"keyword.control.throw.java",
+				"keyword.operator.instanceof.java",
+				"variable.language.java",
+				"variable.language.this.java",
+				"variable.other.object.property.java"
+			],
+			"settings": {
+				"foreground": "#CC6C1D"
+			}
+		}
     ],
     "semanticHighlighting": true,
 	"semanticTokenColors": {
