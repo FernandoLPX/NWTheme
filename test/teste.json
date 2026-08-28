@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "type": "command",
+        "command": "./.github/hooks/track-skill-use.sh",
+        "timeout": 10
+      }
+    ],
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "./.github/hooks/track-skill-use.sh",
+        "timeout": 10
+      }
+    ]
+  }
+}
