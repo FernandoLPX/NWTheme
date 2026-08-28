@@ -805,6 +805,14 @@
 		},
 		{
 			"scope": [
+				"keyword.operator.assignment.java"
+			],
+			"settings": {
+				"foreground": "#FFFFFF"
+			}
+		},
+		{
+			"scope": [
 				"storage.modifier.java",
 				"storage.modifier.extends.java",
 				"storage.modifier.super.java",

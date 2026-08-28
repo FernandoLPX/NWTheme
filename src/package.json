@@ -2,8 +2,9 @@
   "name": "meu-tema-pessoal",
   "displayName": "Meu Tema Pessoal",
   "description": "Tema pessoal para VS Code com cores ajustadas por linguagem (Monokai + Eclipse)",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "FernandoLPX",
+  "keywords": ["theme", "monokai", "eclipse", "java", "dark"],
   "engines": {
     "vscode": "^1.90.0"
   },
