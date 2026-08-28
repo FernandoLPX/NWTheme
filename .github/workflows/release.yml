@@ -25,9 +25,10 @@ jobs:
         run: npm install -g @vscode/vsce
 
       - name: Package extension
+        working-directory: src
         run: vsce package
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: "*.vsix"
+          files: "src/*.vsix"
