@@ -1,0 +1,7 @@
+# Ignore everything
+**
+
+# Only needed for build
+!src
+!Dockerfile
+!docker-compose.yml

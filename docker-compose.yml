@@ -1,0 +1,7 @@
+services:
+  vsce:
+    build: .
+    volumes:
+      - ./src:/app
+      - ./dist:/dist
+    command: package --out /dist
