@@ -51,14 +51,32 @@ Usar a autenticação já configurada (HTTPS ou SSH). Nunca imprimir, versionar 
 Quando a autenticação por token for necessária e o arquivo local `.github-token` existir, tratá-lo como um segredo de uma única linha:
 
 - confirmar apenas que o arquivo existe e está legível; nunca imprimir seu conteúdo, registrá-lo em logs ou incluí-lo em argumentos visíveis do comando;
-- para comandos do GitHub CLI, disponibilizar o conteúdo somente no ambiente do processo:
+- NÃO instalar nem usar o GitHub CLI (`gh`) localmente. Para operações de API (PR, Release etc.), usar a GitHub REST API via `curl`, disponibilizando o token somente no ambiente do processo e nunca na URL:
 
   ```bash
-  GH_TOKEN="$(<.github-token)" gh <comando>
+  GH_TOKEN="$(<.github-token)" curl -sS -L \
+    -H "Accept: application/vnd.github+json" \
+    -H "Authorization: Bearer $GH_TOKEN" \
+    -H "X-GitHub-Api-Version: 2022-11-28" \
+    -d '{"base":"main","head":"<branch>","title":"<titulo>","body":"<corpo>"}' \
+    https://api.github.com/repos/FernandoLPX/NWTheme/pulls
+  unset GH_TOKEN
+  ```
+
+  Exemplo de criação de PR com squash implícito no merge pela plataforma:
+
+  ```bash
+  GH_TOKEN="$(<.github-token)" curl -sS -L \
+    -H "Accept: application/vnd.github+json" \
+    -H "Authorization: Bearer $GH_TOKEN" \
+    -H "X-GitHub-Api-Version: 2022-11-28" \
+    -d '{"base":"main","head":"chore/preparar-versao-0-2-0-20260829000000","title":"chore(release): preparar versão 0.2.0","body":"Atualiza versão para 0.2.0, recupera README da raiz e ajusta fluxo de PR com squash."}' \
+    https://api.github.com/repos/FernandoLPX/NWTheme/pulls
+  unset GH_TOKEN
   ```
 
 - para uma sequência de comandos, preferir uma variável de ambiente temporária no mesmo shell e removê-la ao terminar (`unset GH_TOKEN`);
-- não executar `git remote set-url` com o token embutido na URL. Para operações Git em remoto HTTPS, usar a integração de credenciais do GitHub CLI ou a autenticação SSH já configurada;
+- não executar `git remote set-url` com o token embutido na URL. Para operações Git em remoto HTTPS, usar a autenticação SSH já configurada ou a API via `curl` com header `Authorization: Bearer`;
 - se o arquivo estiver com permissões mais amplas que `600`, corrigir para leitura e escrita apenas pelo proprietário antes de usá-lo;
 - se `.github-token` estiver ausente, vazio ou inválido, interromper a operação remota e solicitar autenticação ao usuário. Não criar, substituir ou solicitar o token em chat.
 
