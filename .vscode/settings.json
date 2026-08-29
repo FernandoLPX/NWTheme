@@ -1,4 +1,9 @@
 {
     "workbench.colorTheme": "Meu Tema Pessoal",
-    "workbench.iconTheme": "a-file-icon-vscode"
+    "workbench.iconTheme": "a-file-icon-vscode",
+    "java.project.sourcePaths": [
+        "test/java-proj/src",
+        "test/java-proj"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

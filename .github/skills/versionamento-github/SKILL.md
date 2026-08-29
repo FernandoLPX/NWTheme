@@ -137,7 +137,7 @@ Criar branches a partir de `main`, salvo instrução diferente, no formato:
 
 Exemplo: `fix/contraste-comentarios-sql-20260828103000`.
 
-Antes do PR, verificar o diff, o estado do repositório e o empacotamento. Não presumir squash, rebase ou merge commit: seguir a política configurada no GitHub.
+Antes do PR, verificar o diff, o estado do repositório e o empacotamento. Política explícita do projeto: usar PR com squash; não seguir política genérica de merge sem squash, rebase ou merge commit. O PR deve ser concluído com squash na plataforma e o resultado final deve respeitar a convenção do repositório.
 
 ## Release
 
