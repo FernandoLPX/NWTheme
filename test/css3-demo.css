@@ -1,0 +1,950 @@
+/*
+ * CSS3 Demo - Token Scopes
+ * Use "Developer: Inspect TM Scopes" to see each scope
+ */
+
+/* ==============================================================================
+   COMMENTS
+   comment
+   punctuation.definition.comment.css
+   ============================================================================== */
+
+/* Single line comment */
+ /* This is also a comment */
+
+/*
+ * Multi-line
+ * comment
+ */
+
+/* ==============================================================================
+   SELECTORS
+   entity.name.tag.css
+   entity.other.attribute-name.id.css
+   entity.other.attribute-name.class.css
+   entity.other.attribute-name.pseudo-class.css
+   entity.other.attribute-name.pseudo-element.css
+   support.type.property-name.css
+   ============================================================================== */
+
+/* Tag selector */
+body {
+    /* entity.name.tag.css */
+}
+
+div {
+    /* entity.name.tag.css */
+}
+
+/* Class selector */
+.container {
+    /* entity.other.attribute-name.class.css */
+}
+
+.my-class {
+    /* entity.other.attribute-name.class.css */
+}
+
+/* ID selector */
+#header {
+    /* entity.other.attribute-name.id.css */
+}
+
+#main-container {
+    /* entity.other.attribute-name.id.css */
+}
+
+/* Universal selector */
+* {
+    /* entity.name.tag.wildcard.css */
+}
+
+/* Attribute selector */
+[disabled] {
+    /* entity.other.attribute-name.html */
+}
+
+[type="text"] {
+    /* entity.other.attribute-name.html */
+}
+
+[class^="col-"] {
+    /* entity.other.attribute-name.html */
+}
+
+[data-value="test"] {
+    /* entity.other.attribute-name.html */
+}
+
+/* Pseudo-classes */
+:hover {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+:focus {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+:active {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+:first-child {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+:last-child {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+:nth-child(2) {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+:not(.active) {
+    /* entity.other.attribute-name.pseudo-class.css */
+}
+
+/* Pseudo-elements */
+::before {
+    /* entity.other.attribute-name.pseudo-element.css */
+}
+
+::after {
+    /* entity.other.attribute-name.pseudo-element.css */
+}
+
+::first-line {
+    /* entity.other.attribute-name.pseudo-element.css */
+}
+
+::first-letter {
+    /* entity.other.attribute-name.pseudo-element.css */
+}
+
+::selection {
+    /* entity.other.attribute-name.pseudo-element.css */
+}
+
+::placeholder {
+    /* entity.other.attribute-name.pseudo-element.css */
+}
+
+/* Combinators */
+div > p {
+    /* entity.name.tag.css + combinator */
+}
+
+ul li {
+    /* descendant combinator */
+}
+
+h1 + p {
+    /* adjacent sibling */
+}
+
+h1 ~ p {
+    /* general sibling */
+}
+
+/* Multiple selectors */
+h1, h2, h3 {
+    /* comma-separated */
+}
+
+/* ==============================================================================
+   PROPERTIES
+   support.type.property-name.css
+   ============================================================================== */
+
+.selector {
+    /* Color properties */
+    color: red;
+    background-color: #FF5733;
+    border-color: rgb(255, 0, 0);
+    opacity: 0.5;
+
+    /* Typography */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    white-space: pre-wrap;
+
+    /* Box Model */
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    /* Display */
+    display: flex;
+    display: block;
+    display: inline;
+    display: inline-block;
+    display: grid;
+    display: none;
+    display: list-item;
+
+    /* Positioning */
+    position: relative;
+    position: absolute;
+    position: fixed;
+    position: sticky;
+    top: 0;
+    right: 10px;
+    bottom: 20px;
+    left: 30px;
+    z-index: 1000;
+
+    /* Flexbox */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+    /* Grid */
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-area: header;
+
+    /* Background */
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+
+    /* Other */
+    overflow: hidden;
+    visibility: visible;
+    cursor: pointer;
+    content: "";
+    quotes: "\201C" "\201D";
+}
+
+/* ==============================================================================
+   VALUES - NUMBERS
+   constant.numeric.css
+   ============================================================================== */
+
+.numeric-values {
+    width: 100px;           /* px */
+    width: 10em;            /* em */
+    width: 10rem;           /* rem */
+    width: 50%;             /* percentage */
+    width: 100vh;           /* viewport units */
+    width: 100vw;
+    width: 100vmin;
+    width: 100vmax;
+    width: 0;               /* zero */
+    z-index: 10;            /* integer */
+    opacity: 0.5;           /* decimal */
+    flex-grow: 1;           /* integer */
+    order: 2;               /* integer */
+}
+
+/* ==============================================================================
+   VALUES - STRINGS
+   string.quoted.double.css
+   string.quoted.single.css
+   ============================================================================== */
+
+.string-values {
+    font-family: 'Arial', sans-serif;
+    font-family: "Times New Roman", serif;
+    content: "text content";
+    content: 'single quoted';
+    background-image: url("image.png");
+}
+
+/* ==============================================================================
+   VALUES - COLORS
+   support.constant.color.css
+   support.function.color.css
+   constant.numeric.hex.css
+   ============================================================================== */
+
+.color-values {
+    color: red;                    /* support.constant.color.css */
+    color: blue;
+    color: currentColor;
+
+    color: #FF5733;               /* constant.numeric.hex.css */
+    color: #FFF;                  /* short hex */
+    color: #aabbcc;               /* lowercase hex */
+
+    color: rgb(255, 0, 0);        /* support.function.color.css */
+    color: rgba(255, 0, 0, 0.5);  /* rgba */
+    color: hsl(360, 100%, 50%);   /* hsl */
+    color: hsla(360, 100%, 50%, 0.5);
+    color: transparent;
+    color: inherit;
+}
+
+/* ==============================================================================
+   VALUES - FUNCTIONS
+   support.function.css
+   ============================================================================== */
+
+.function-values {
+    /* Color functions */
+    color: rgba(255, 0, 0, 0.5);
+    color: hsl(360, 100%, 50%);
+    color: calc(100% - 20px);
+    color: var(--custom-color);
+    color: var(--custom-color, blue);
+    color: linear-gradient(to right, red, blue);
+    color: radial-gradient(circle, red, blue);
+    color: repeating-linear-gradient(45deg, red, blue 10px);
+
+    /* Transform functions */
+    transform: rotate(45deg);
+    transform: scale(1.5);
+    transform: translate(10px, 20px);
+    transform: skew(10deg, 20deg);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    /* Other functions */
+    background-image: url('image.jpg');
+    font-family: 'Font', sans-serif;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    filter: blur(5px);
+    counter-increment: section;
+    counter-reset: subsection;
+    attr(data-value);
+}
+
+/* ==============================================================================
+   VALUES - KEYWORDS
+   support.constant.property-value.css
+   keyword.other.unit.css
+   ============================================================================== */
+
+.keyword-values {
+    display: block;
+    display: flex;
+    display: grid;
+    display: none;
+    display: inherit;
+    display: initial;
+    display: unset;
+
+    position: relative;
+    position: absolute;
+    position: fixed;
+    position: sticky;
+    position: inherit;
+
+    overflow: visible;
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+    overflow: clip;
+
+    visibility: visible;
+    visibility: hidden;
+    visibility: collapse;
+
+    float: left;
+    float: right;
+    float: none;
+    float: inherit;
+
+    clear: none;
+    clear: left;
+    clear: right;
+    clear: both;
+    clear: inherit;
+
+    cursor: pointer;
+    cursor: default;
+    cursor: not-allowed;
+    cursor: grab;
+    cursor: grabbing;
+
+    /* Units as keywords */
+    width: auto;
+    height: auto;
+    width: initial;
+    height: inherit;
+}
+
+/* ==============================================================================
+   UNITS
+   keyword.other.unit.css
+   ============================================================================== */
+
+.unit-values {
+    /* Length units */
+    width: 10px;              /* keyword.other.unit.css */
+    width: 10em;              /* keyword.other.unit.css */
+    width: 10rem;             /* keyword.other.unit.css */
+    width: 10ex;              /* keyword.other.unit.css */
+    width: 10ch;             /* keyword.other.unit.css */
+    width: 10mm;             /* keyword.other.unit.css */
+    width: 10cm;             /* keyword.other.unit.css */
+    width: 10in;             /* keyword.other.unit.css */
+    width: 10pt;             /* keyword.other.unit.css */
+    width: 10pc;             /* keyword.other.unit.css */
+
+    /* Viewport units */
+    width: 100vw;            /* keyword.other.unit.css */
+    width: 100vh;            /* keyword.other.unit.css */
+    width: 100vmin;          /* keyword.other.unit.css */
+    width: 100vmax;          /* keyword.other.unit.css */
+
+    /* Angle units */
+    transform: rotate(45deg);      /* keyword.other.unit.css */
+    transform: rotate(1.57rad);    /* keyword.other.unit.css */
+    transform: rotate(100grad);   /* keyword.other.unit.css */
+    transform: rotate(0.25turn);   /* keyword.other.unit.css */
+
+    /* Time units */
+    transition: all 0.3s;         /* keyword.other.unit.css */
+    transition: all 300ms;        /* keyword.other.unit.css */
+    animation: fade 2s infinite;   /* keyword.other.unit.css */
+
+    /* Resolution units */
+    @media (min-resolution: 300dpi) { }
+    @media (min-resolution: 100dpcm) { }
+
+    /* Frequency units */
+    @media (scan: interlace) { }
+
+    /* Flexible units */
+    width: 1fr;              /* keyword.other.unit.css */
+    width: 1vw;
+    width: 1vh;
+}
+
+/* ==============================================================================
+   AT-RULES
+   keyword.control.at-rule.css
+   ============================================================================== */
+
+/* @charset */
+@charset "UTF-8";
+
+/* @import */
+@import 'reset.css';
+@import url('styles.css');
+@import url('print.css') print;
+
+/* @namespace */
+@namespace svg "http://www.w3.org/2000/svg";
+
+/* @media */
+@media screen {
+    /* support.type.property-name.css */
+    body { color: black; }
+}
+
+@media print {
+    body { color: black; }
+}
+
+@media screen and (max-width: 768px) {
+    .container { width: 100%; }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container { width: 750px; }
+}
+
+@media (orientation: portrait) {
+    body { color: blue; }
+}
+
+@media (hover: hover) {
+    a:hover { color: red; }
+}
+
+/* @supports */
+@supports (display: flex) {
+    .container { display: flex; }
+}
+
+@supports not (display: grid) {
+    .container { display: flex; }
+}
+
+@supports (display: flex) and (display: grid) {
+    .container { display: flex; }
+}
+
+/* @keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* @font-face */
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/myfont.woff2') format('woff2'),
+         url('fonts/myfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* @font-feature-values */
+@font-feature-values 'MyFont' {
+    @swash { fancy: 1; }
+    @ornaments { fleuron: 1; }
+}
+
+/* @counter-style */
+@counter-style custom {
+    system: cyclic;
+    symbols: "\25A0" "\25A1";
+    suffix: " ";
+}
+
+/* @layer */
+@layer utilities {
+    .mt-1 { margin-top: 1px; }
+    .mt-2 { margin-top: 2px; }
+}
+
+@layer framework, utilities;
+
+/* @property */
+@property --rotation {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* @viewport */
+@viewport {
+    zoom: 1.0;
+    min-zoom: 0.5;
+    max-zoom: 2.0;
+    orientation: landscape;
+}
+
+/* @page */
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
+@page :first {
+    margin-top: 2cm;
+}
+
+/* @document */
+@document url("https://example.com/") {
+    body { background: white; }
+}
+
+/* @font-palette-values */
+@font-palette-values --dark {
+    font-family: "MyFont";
+    override-colors: 0 #333;
+}
+
+/* ==============================================================================
+   CUSTOM PROPERTIES (CSS Variables)
+   variable.other.custom-property.css
+   ============================================================================== */
+
+:root {
+    /* variable.other.custom-property.css */
+    --custom-color: #FF5733;
+    --custom-spacing: 10px;
+    --custom-font-size: 16px;
+    --custom-border: 1px solid red;
+    --custom-opacity: 0.5;
+    --empty-var: ;
+}
+
+.custom-props {
+    color: var(--custom-color);
+    padding: var(--custom-spacing, 20px);
+    font-size: var(--custom-font-size);
+    border: var(--custom-border);
+    opacity: var(--custom-opacity, 1);
+}
+
+/* ==============================================================================
+   ANIMATIONS & TRANSITIONS
+   meta.property-value.css
+   ============================================================================== */
+
+.animation-example {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.transition-example {
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.shorthand-transition {
+    transition: all 0.3s ease-in-out 0.1s;
+}
+
+.shorthand-animation {
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+/* ==============================================================================
+   GRID SPECIFIC
+   meta.property-list.css
+   ============================================================================== */
+
+.grid-example {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    gap: 20px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    grid-area: header;
+}
+
+.grid-auto {
+    grid-template-columns: auto 1fr auto;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+/* ==============================================================================
+   FLEXBOX SPECIFIC
+   ============================================================================== */
+
+.flexbox-example {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-between;
+    flex-flow: row wrap;
+    gap: 10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-self: center;
+    order: 1;
+}
+
+.flex-shorthand {
+    flex: 1 0 auto;
+}
+
+/* ==============================================================================
+   PSEUDO-CLASSES (Full List)
+   entity.other.attribute-name.pseudo-class.css
+   ============================================================================== */
+
+.pseudo-classes {
+    /* Dynamic pseudo-classes */
+    :link { }                    /* unvisited links */
+    :visited { }                /* visited links */
+    :hover { }                   /* mouse over */
+    :active { }                  /* being activated */
+    :focus { }                   /* focused */
+    :focus-within { }            /* focused or has focused child */
+    :focus-visible { }           /* focused and should be visible */
+
+    /* UI element states */
+    :enabled { }                 /* enabled elements */
+    :disabled { }                /* disabled elements */
+    :read-only { }               /* read-only elements */
+    :read-write { }             /* read-write elements */
+    :placeholder-shown { }       /* placeholder visible */
+    :default { }                /* default option */
+    :checked { }                /* checked elements */
+    :indeterminate { }          /* indeterminate state */
+    :valid { }                  /* valid input */
+    :invalid { }                /* invalid input */
+    :in-range { }              /* in range */
+    :out-of-range { }          /* out of range */
+    :required { }               /* required input */
+    :optional { }               /* optional input */
+
+    /* Structural pseudo-classes */
+    :root { }                   /* document root */
+    :empty { }                  /* no children */
+    :first-child { }           /* first child */
+    :last-child { }            /* last child */
+    :only-child { }            /* only child */
+    :first-of-type { }         /* first of type */
+    :last-of-type { }          /* last of type */
+    :only-of-type { }           /* only of type */
+    :nth-child(2n+1) { }       /* nth child */
+    :nth-last-child(2n) { }     /* nth last child */
+    :nth-of-type(odd) { }       /* nth of type */
+    :nth-last-of-type(even) { } /* nth last of type */
+
+    /* Negation */
+    :not(.active) { }
+    :not(:hover) { }
+
+    /* Lang */
+    :lang(en) { }
+    :lang(fr) { }
+
+    /* Empty */
+    :blank { }
+}
+
+/* ==============================================================================
+   PSEUDO-ELEMENTS (Full List)
+   entity.other.attribute-name.pseudo-element.css
+   ============================================================================== */
+
+.pseudo-elements {
+    ::first-line { }            /* first line of text */
+    ::first-letter { }           /* first letter */
+    ::before { }                 /* before content */
+    ::after { }                  /* after content */
+    ::selection { }              /* selected text */
+    ::placeholder { }            /* placeholder text */
+    ::marker { }                 /* list markers */
+    ::backdrop { }              /* backdrop for dialog/fullscreen */
+    ::cue { }                   /* WebVTT cues */
+    ::file-selector-button { }  /* file input button */
+}
+
+/* ==============================================================================
+   LOGICAL PROPERTIES
+   support.type.property-name.css
+   ============================================================================== */
+
+.logical-properties {
+    /* Logical inline */
+    margin-inline: 10px;
+    padding-inline: 20px;
+    border-inline: 1px solid;
+    inset-inline: 10px;
+
+    /* Logical block */
+    margin-block: 10px;
+    padding-block: 20px;
+    border-block: 1px solid;
+    inset-block: 10px;
+
+    /* Logical sides */
+    margin-inline-start: 10px;
+    margin-inline-end: 20px;
+    margin-block-start: 10px;
+    margin-block-end: 20px;
+
+    /* Logical dimensions */
+    block-size: 100px;
+    inline-size: 200px;
+    max-block-size: 300px;
+    min-block-size: 50px;
+    max-inline-size: 400px;
+    min-inline-size: 100px;
+}
+
+/* ==============================================================================
+   SPECIAL VALUES
+   constant.language.css
+   support.constant.property-value.css
+   ============================================================================== */
+
+.special-values {
+    /* CSS-wide keywords */
+    width: inherit;
+    width: initial;
+    width: unset;
+    width: revert;
+    width: revert-layer;
+
+    /* CSS-wide functions */
+    width: min(100px, 50%);
+    width: max(100px, 50%);
+    width: clamp(100px, 50%, 200px);
+
+    /* Other special */
+    width: auto;
+    width: none;
+    width: normal;
+    content: normal;
+    quotes: normal;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* ==============================================================================
+   NESTED RULES (CSS Nesting - Modern)
+   meta.rule.nested.css
+   ============================================================================== */
+
+.nested-rules {
+    display: flex;
+
+    & > .item {
+        color: red;
+
+        &:hover {
+            color: blue;
+        }
+
+        @media (min-width: 768px) {
+            color: green;
+        }
+    }
+
+    @supports (display: grid) {
+        display: grid;
+    }
+}
+
+/* ==============================================================================
+   SCROLLBAR STYLING
+   ============================================================================== */
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-width: thick;
+    scrollbar-width: auto;
+    scrollbar-color: #333 #f5f5f5;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ==============================================================================
+   CONTAINER QUERIES
+   ============================================================================== */
+
+@container {
+    .card {
+        display: flex;
+    }
+}
+
+@container card-container (min-width: 400px) {
+    .card {
+        flex-direction: row;
+    }
+}
+
+/* ==============================================================================
+   COLOR FUNCTION VARIANTS
+   ============================================================================== */
+
+.color-functions {
+    /* RGB variations */
+    color: rgb(255 0 0);                    /* space-separated */
+    color: rgb(255 0 0 / 0.5);             /* with alpha */
+    color: rgb(from blue r g b);           /* color conversion */
+
+    /* HSL variations */
+    color: hsl(360 100% 50%);              /* space-separated */
+    color: hsl(360 100% 50% / 0.5);       /* with alpha */
+    color: hsl(from #ff0000 h s l);        /* color conversion */
+
+    /* Lab colors */
+    color: lab(50% 40 20);
+    color: lch(50% 40 20);
+    color: oklab(50% 0.4 0.2);
+    color: oklch(50% 0.4 20deg);
+
+    /* Relative colors */
+    color: hsl(from var(--color) h s l);
+}
+
+/* ==============================================================================
+   MIX & CALC
+   ============================================================================== */
+
+.math-demo {
+    width: calc(100% - 20px);
+    width: calc(50vw + 100px);
+    width: calc(10em * 2);
+    width: calc(100% / 3);
+    width: min(100px, 50%);
+    width: max(100px, 50%);
+    width: clamp(200px, 50%, 400px);
+
+    color: color-mix(in srgb, red 50%, blue);
+    color: color-mix(in oklch, var(--c1) 70%, var(--c2));
+}
+
+/* ==============================================================================
+   @POSITION-FALLBACK
+   ============================================================================== */
+
+@position-fallback --fallback {
+    to {
+        left: 0;
+        @try {
+            left: env(safe-area-inset-left);
+        }
+    }
+}
+
+.using-fallback {
+    position: absolute;
+    position-fallback: --fallback;
+}
