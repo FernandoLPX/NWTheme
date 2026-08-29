@@ -157,6 +157,15 @@ Exemplo: `fix/contraste-comentarios-sql-20260828103000`.
 
 Antes do PR, verificar o diff, o estado do repositório e o empacotamento. Política explícita do projeto: usar PR com squash; não seguir política genérica de merge sem squash, rebase ou merge commit. O PR deve ser concluído com squash na plataforma e o resultado final deve respeitar a convenção do repositório.
 
+Após o merge squash do PR, remover a branch de trabalho para manter o repositório limpo:
+
+```bash
+git branch -D <tipo>/<descricao>-<timestamp>
+git push origin --delete <tipo>/<descricao>-<timestamp>
+```
+
+Como o squash não cria commit de merge, o Git localmente não enxerga a branch como "já mergeada"; por isso usa-se `-D` (force delete) na branch local. A remoção remota exige confirmação explícita do usuário, conforme as regras de operações remotas desta skill.
+
 ## Release
 
 Uma tag marca um commit; uma GitHub Release publica e distribui essa tag. Neste projeto, um push de tag `v*` aciona o workflow que gera o `.vsix` e cria/atualiza a Release correspondente.
