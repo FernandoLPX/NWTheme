@@ -1,0 +1,19 @@
+{
+  "name": "NWTheme Dev (Java 25)",
+  "image": "eclipse-temurin:25-alpine",
+  "runArgs": [
+    "--name",
+    "nwtheme-java-dev"
+  ],
+  "postCreateCommand": "apk add --no-cache bash maven",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.java",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-maven",
+        "circlecodesolution.ccs-flutter-color"
+      ]
+    }
+  }
+}

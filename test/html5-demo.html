@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!-- markup.html entity.name.tag.html -->
+<html lang="pt-BR">
+<head>
+    <!-- meta.tag.html punctuation.definition.tag.html -->
+    <meta charset="UTF-8">
+    <!-- meta.tag.meta.html entity.other.attribute-name.html -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- support.type.property-name.html -->
+
+    <title>HTML5 Demo - Token Scopes</title>
+    <!-- entity.name.tag.style.html text.html headline.html -->
+
+    <style>
+        /* comment.css */
+        /* support.type.property-name.css */
+
+        /* ============================================
+           CSS - SELECTORS
+           entity.name.tag.css
+           entity.other.attribute-name.class.css
+           entity.other.attribute-name.id.css
+           support.type.property-name.css
+           ============================================ */
+
+        /* Tag selector */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Class selector */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* ID selector */
+        #header {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Attribute selector */
+        [disabled] {
+            opacity: 0.5;
+        }
+
+        /* Pseudo-class */
+        :hover {
+            cursor: pointer;
+        }
+
+        /* ============================================
+           CSS - PROPERTIES & VALUES
+           support.type.property-name.css
+           constant.numeric.css
+           string.quoted.double.css
+           ============================================ */
+
+        h1 {
+            font-size: 2.5rem;        /* constant.numeric.css */
+            color: #333333;           /* string.quoted.hex.css */
+            text-align: center;      /* support.constant.property-value.css */
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            font-size: 16px;          /* constant.numeric.css */
+            line-height: 1.6;         /* constant.numeric.css */
+            color: rgb(51, 51, 51);   /* support.function.color.css */
+        }
+
+        /* ============================================
+           CSS - KEYWORDS
+           keyword.control.css
+           support.constant.property-value.css
+           ============================================ */
+
+        .example {
+            display: flex;           /* support.constant.property-value.css */
+            position: relative;       /* support.constant.property-value.css */
+            overflow: hidden;         /* support.constant.property-value.css */
+            z-index: 10;             /* constant.numeric.css */
+        }
+
+    </style>
+
+    <script>
+        /* comment */
+        /* keyword.control.js */
+
+        // ============================================
+        // JAVASCRIPT - COMMENTS
+        // comment
+        // ============================================
+
+        // Single line comment
+        /* Multi-line
+           comment */
+
+        // ============================================
+        // JAVASCRIPT - VARIABLES
+        // variable.other.js
+        // variable.language.js
+        // storage.type.js
+        // ============================================
+
+        let variableLet = 'let variable';
+        const constantConst = 'const variable';
+        var variableVar = 'var variable';
+
+        var number = 42;                /* constant.numeric.js */
+        var floatNum = 3.14;           /* constant.numeric.js */
+        var hexNum = 0xFF;              /* constant.numeric.hex.js */
+        var binaryNum = 0b1010;        /* constant.numeric.js */
+        var octalNum = 0o777;          /* constant.numeric.js */
+
+        var stringDouble = "double quotes";  /* string.quoted.double.js */
+        var stringSingle = 'single quotes';  /* string.quoted.single.js */
+        var stringTemplate = `template literal`; /* string.template.js */
+
+        var booleanTrue = true;        /* constant.language.js */
+        var booleanFalse = false;      /* constant.language.js */
+        var nullValue = null;          /* constant.language.js */
+        var undefinedValue = undefined; /* constant.language.js */
+
+        // ============================================
+        // JAVASCRIPT - OBJECTS & ARRAYS
+        // meta.structure.js
+        // ============================================
+
+        var obj = {
+            /* entity.name.type.class.js */
+            name: 'Object',
+            value: 123,
+            nested: {
+                deep: true
+            }
+        };
+
+        var arr = [1, 2, 3, 4, 5];
+        var arrMixed = [1, 'two', true, null, {key: 'value'}];
+
+        // ============================================
+        // JAVASCRIPT - FUNCTIONS
+        // entity.name.function.js
+        // meta.function.js
+        // ============================================
+
+        function myFunction(param1, param2) {
+            /* entity.name.function.js */
+            return param1 + param2;
+        }
+
+        const arrowFunction = (x, y) => {
+            return x + y;
+        };
+
+        const anonymousFunction = function() {
+            return 'anonymous';
+        };
+
+        // ============================================
+        // JAVASCRIPT - CLASSES
+        // entity.name.type.class.js
+        // storage.type.js
+        // ============================================
+
+        class MyClass {
+            constructor(name) {
+                this.name = name;  /* variable.other.object.js */
+            }
+
+            myMethod() {
+                return this.name;
+            }
+
+            static staticMethod() {
+                return 'static';
+            }
+        }
+
+        // ============================================
+        // JAVASCRIPT - KEYWORDS & CONTROL
+        // keyword.control.js
+        // keyword.operator.js
+        // ============================================
+
+        if (condition) {
+            console.log('true');
+        } else if (otherCondition) {
+            console.log('else if');
+        } else {
+            console.log('else');
+        }
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+        while (condition) {
+            break;
+            continue;
+        }
+
+        do {
+            console.log('executes once');
+        } while (condition);
+
+        switch (value) {
+            case 'one':
+                console.log(1);
+                break;
+            case 'two':
+                console.log(2);
+                break;
+            default:
+                console.log('default');
+        }
+
+        try {
+            throw new Error('error');
+        } catch (error) {
+            console.error(error);
+        } finally {
+            console.log('finally');
+        }
+
+        // ============================================
+        // JAVASCRIPT - OPERATORS
+        // keyword.operator.js
+        // ============================================
+
+        var sum = 10 + 5;          /* keyword.operator.arithmetic.js */
+        var sub = 10 - 5;          /* keyword.operator.arithmetic.js */
+        var mul = 10 * 5;          /* keyword.operator.arithmetic.js */
+        var div = 10 / 5;          /* keyword.operator.arithmetic.js */
+        var mod = 10 % 5;          /* keyword.operator.arithmetic.js */
+        var inc = ++i;             /* keyword.operator.increment.js */
+        var dec = --i;             /* keyword.operator.decrement.js */
+
+        var equal = a === b;        /* keyword.operator.comparison.js */
+        var notEqual = a !== b;    /* keyword.operator.comparison.js */
+        var greater = a > b;        /* keyword.operator.comparison.js */
+        var less = a < b;          /* keyword.operator.comparison.js */
+
+        var and = condition && other;  /* keyword.operator.logical.js */
+        var or = condition || other;   /* keyword.operator.logical.js */
+        var not = !condition;          /* keyword.operator.logical.js */
+
+        var ternary = condition ? 'yes' : 'no';
+        var coalesce = value ?? 'default';
+
+        // ============================================
+        // JAVASCRIPT - METHODS & PROPERTIES
+        // entity.name.function.js
+        // variable.other.object.property.js
+        // ============================================
+
+        var result = Math.max(1, 2, 3);  /* support.function.js */
+        var str = obj.name.toUpperCase();
+        var len = stringDouble.length;
+
+        console.log(result);
+        console.log(str.length);
+
+    </script>
+</head>
+<body>
+    <!-- ============================================
+         HTML - STRUCTURE
+         meta.tag.html
+         entity.name.tag.html
+         entity.other.attribute-name.html
+         text.html
+         ============================================ -->
+
+    <!-- entity.name.tag.html -->
+    <header id="header">
+        <!-- entity.name.tag.html -->
+        <h1>HTML5 Token Scopes Demo</h1>
+        <!-- entity.name.tag.heading.html -->
+    </header>
+
+    <!-- ============================================
+         HTML - TEXT CONTENT
+         text.html
+         meta.heading.html
+         ============================================ -->
+
+    <!-- markup.heading.html -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- markup.strong.html -->
+    <strong>Bold text (strong)</strong>
+
+    <!-- markup.emphasis.html -->
+    <em>Italic text (em)</em>
+
+    <!-- markup.underline.html -->
+    <u>Underlined text</u>
+
+    <!-- markup.strikethrough.html -->
+    <s>Strikethrough text</s>
+
+    <!-- markup.quote.html -->
+    <q>Inline quote</q>
+    <blockquote>Block quote</blockquote>
+
+    <!-- markup.code.html -->
+    <code>Inline code</code>
+    <pre><code>Preformatted
+    code block</code></pre>
+
+    <!-- markup.raw.html -->
+    <samp>Sample output</samp>
+    <kbd>Keyboard input</kbd>
+
+    <!-- markup.italic.html -->
+    <i>Italic text (i)</i>
+    <cite>Citation</cite>
+    <dfn>Definition</dfn>
+
+    <!-- ============================================
+         HTML - LINKS & ANCHORS
+         markup.link.html
+         entity.name.tag.anchor.html
+         ============================================ -->
+
+    <!-- markup.link.html -->
+    <a href="https://example.com">External Link</a>
+    <a href="#section">Internal Link</a>
+    <a href="page.html">Relative Link</a>
+    <a href="mailto:email@example.com">Email Link</a>
+
+    <!-- ============================================
+         HTML - LISTS
+         markup.list.html
+         entity.name.tag.html
+         ============================================ -->
+
+    <ul>
+        <!-- markup.list.unnumbered.html -->
+        <li>Unordered item 1</li>
+        <li>Unordered item 2</li>
+        <li>Unordered item 3</li>
+    </ul>
+
+    <ol>
+        <!-- markup.list.numbered.html -->
+        <li>Ordered item 1</li>
+        <li>Ordered item 2</li>
+        <li>Ordered item 3</li>
+    </ol>
+
+    <dl>
+        <dt>Definition Term</dt>
+        <dd>Definition Description</dd>
+    </dl>
+
+    <!-- ============================================
+         HTML - TABLES
+         entity.name.tag.table.html
+         markup.table.html
+         ============================================ -->
+
+    <!-- markup.table.html -->
+    <table border="1">
+        <!-- entity.name.tag.table.html -->
+        <thead>
+            <tr>
+                <!-- entity.name.tag.tr.html -->
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cell 1</td>
+                <td>Cell 2</td>
+                <td>Cell 3</td>
+            </tr>
+            <tr>
+                <td>Cell 4</td>
+                <td>Cell 5</td>
+                <td>Cell 6</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Footer 1</td>
+                <td>Footer 2</td>
+                <td>Footer 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- ============================================
+         HTML - FORMS
+         entity.name.tag.form.html
+         entity.name.tag.input.html
+         entity.name.tag.label.html
+         ============================================ -->
+
+    <form action="/submit" method="POST">
+        <!-- entity.name.tag.form.html -->
+        <label for="username">Username:</label>
+        <!-- entity.name.tag.label.html -->
+        <input type="text" id="username" name="username" placeholder="Enter username">
+        <!-- entity.name.tag.input.html -->
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="select">Select:</label>
+        <select id="select" name="select">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+
+        <label for="textarea">Textarea:</label>
+        <textarea id="textarea" name="textarea" rows="4" cols="50"></textarea>
+
+        <label>
+            <input type="checkbox" name="checkbox"> Checkbox
+        </label>
+
+        <input type="radio" name="radio" value="1"> Radio 1
+        <input type="radio" name="radio" value="2"> Radio 2
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+    </form>
+
+    <!-- ============================================
+         HTML - MEDIA
+         entity.name.tag.img.html
+         entity.name.tag.video.html
+         entity.name.tag.audio.html
+         ============================================ -->
+
+    <img src="image.jpg" alt="Image description" width="300" height="200">
+    <!-- entity.name.tag.img.html -->
+
+    <video src="video.mp4" controls width="400" height="300">
+        <track kind="subtitles" src="subtitles.vtt" srclang="pt">
+    </video>
+    <!-- entity.name.tag.video.html -->
+
+    <audio src="audio.mp3" controls>
+        <source src="audio.ogg" type="audio/ogg">
+    </audio>
+    <!-- entity.name.tag.audio.html -->
+
+    <!-- ============================================
+         HTML - STRUCTURAL
+         entity.name.tag.div.html
+         entity.name.tag.span.html
+         entity.name.tag.section.html
+         entity.name.tag.article.html
+         entity.name.tag.header.html
+         entity.name.tag.footer.html
+         entity.name.tag.nav.html
+         entity.name.tag.aside.html
+         entity.name.tag.main.html
+         ============================================ -->
+
+    <div class="container">
+        <!-- entity.name.tag.div.html -->
+        <header>
+            <!-- entity.name.tag.header.html -->
+            <nav>
+                <!-- entity.name.tag.nav.html -->
+                <ul>
+                    <li><a href="#">Nav Item 1</a></li>
+                    <li><a href="#">Nav Item 2</a></li>
+                    <li><a href="#">Nav Item 3</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <!-- entity.name.tag.main.html -->
+            <article>
+                <!-- entity.name.tag.article.html -->
+                <section>
+                    <!-- entity.name.tag.section.html -->
+                    <span>Inline span element</span>
+                    <!-- entity.name.tag.span.html -->
+                </section>
+            </article>
+
+            <aside>
+                <!-- entity.name.tag.aside.html -->
+                <p>Sidebar content</p>
+            </aside>
+        </main>
+
+        <footer>
+            <!-- entity.name.tag.footer.html -->
+            <p>&copy; 2024 Footer content</p>
+        </footer>
+    </div>
+
+    <!-- ============================================
+         HTML - EMBEDDED CONTENT
+         entity.name.tag.iframe.html
+         entity.name.tag.object.html
+         entity.name.tag.embed.html
+         entity.name.tag.canvas.html
+         entity.name.tag.svg.html
+         ============================================ -->
+
+    <iframe src="https://example.com" width="300" height="200"></iframe>
+    <!-- entity.name.tag.iframe.html -->
+
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <!-- entity.name.tag.canvas.html -->
+
+    <svg width="100" height="100">
+        <!-- entity.name.tag.svg.html -->
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+
+    <!-- ============================================
+         HTML - SCRIPTING
+         entity.name.tag.script.html
+         entity.name.tag.style.html
+         ============================================ -->
+
+    <!-- entity.name.tag.script.html -->
+    <script src="external.js"></script>
+
+    <!-- Inline script would go here -->
+    <script>
+        console.log('Inline script');
+    </script>
+
+    <!-- ============================================
+         HTML - METADATA
+         entity.name.tag.meta.html
+         entity.name.tag.link.html
+         entity.name.tag.base.html
+         ============================================ -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- entity.name.tag.link.html -->
+    <base href="https://example.com/">
+    <!-- entity.name.tag.base.html -->
+
+    <!-- ============================================
+         HTML - DIALOG & TEMPLATE
+         entity.name.tag.dialog.html
+         entity.name.tag.template.html
+         entity.name.tag.slot.html
+         ============================================ -->
+
+    <dialog id="myDialog">
+        <!-- entity.name.tag.dialog.html -->
+        <p>Dialog content</p>
+        <button id="closeDialog">Close</button>
+    </dialog>
+
+    <template id="myTemplate">
+        <!-- entity.name.tag.template.html -->
+        <p>Template content</p>
+    </template>
+
+    <!-- ============================================
+         HTML - CUSTOM ELEMENTS
+         entity.name.tag.custom.html
+         ============================================ -->
+
+    <my-component></my-component>
+    <custom-element></custom-element>
+
+    <!-- ============================================
+         HTML - MATH & SVG
+         entity.name.tag.math.html
+         entity.name.tag.svg.html
+         ============================================ -->
+
+    <math>
+        <!-- entity.name.tag.math.html -->
+        <mrow>
+            <mi>x</mi>
+            <mo>+</mo>
+            <mi>y</mi>
+            <mo>=</mo>
+            <mi>z</mi>
+        </mrow>
+    </math>
+
+    <!-- ============================================
+         HTML - SPECIAL ATTRIBUTES
+         entity.other.attribute-name.html
+         text.html
+         ============================================ -->
+
+    <div id="unique-id" class="class1 class2" style="color: red;">
+        <span data-custom="custom-value" title="Tooltip">With attributes</span>
+        <img alt="Alternative text" draggable="true" hidden>
+        <input type="text" contenteditable="true" spellcheck="true">
+    </div>
+
+    <!-- ============================================
+         HTML - EVENTS (as attributes)
+         entity.other.attribute-name.html
+         ============================================ -->
+
+    <button onclick="alert('Clicked!')" onmouseover="this.style.color='red'">
+        Event handlers
+    </button>
+
+</body>
+</html>

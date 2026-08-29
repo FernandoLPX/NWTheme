@@ -21,4 +21,7 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Artefatos compilados de exemplos Java
+test/demo/target/
+
 docker-ops.sh
